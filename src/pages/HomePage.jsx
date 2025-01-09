@@ -1,7 +1,7 @@
-export default function AboutPage() {
+export default function HomePage() {
   return (
     <section className="container-fluid">
-      <h1>Sono About</h1>
+      <h1>HomePage</h1>
     </section>
   );
 }

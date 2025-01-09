@@ -1,7 +1,7 @@
-export default function AboutPage() {
+export default function ContactPage() {
   return (
     <section className="container-fluid">
-      <h1>Sono About</h1>
+      <h1>Sono Contact</h1>
     </section>
   );
 }
