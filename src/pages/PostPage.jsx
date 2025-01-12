@@ -9,14 +9,19 @@ function PostPage() {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`${apiUrl}/posts/${id}`)
-      .then((res) => {
-        setPost(res.data.item);
-      })
-      .finally(() => {
-        console.log("Caricamento completato");
-      });
+    if (id) {
+      axios
+        .get(`${apiUrl}/posts/${id}`)
+        .then((res) => {
+          setPost(res.data.item);
+        })
+        .catch((error) => {
+          console.error("Errore nel recupero del post:", error);
+        })
+        .finally(() => {
+          console.log("Caricamento completato");
+        });
+    }
   }, [id]);
 
   if (!post) {

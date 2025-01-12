@@ -7,7 +7,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import PostsPage from "./pages/PostsPage";
-//  import AddPostsPage from "./pages/AddPostsPage";
+import AddPostsPage from "./pages/AddPostsPage";
 import PostPage from "./pages/PostPage";
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
           <Route path="/about" Component={AboutPage} />
           <Route path="/posts">
             <Route index Component={PostsPage} />
+            <Route path="create" Component={AddPostsPage} />
             <Route path=":id" Component={PostPage} />
-            <Route path="create" />
           </Route>
         </Route>
       </Routes>
